@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="calculator" value="">
+<br>
+<button class="btn" type="button" name="button" onclick="addValue(1)">1</button>
+<button class="btn" type="button" name="button" onclick="addValue(2)">2</button>
+<button class="btn" type="button" name="button" onclick="addValue(3)">3</button>
+<button class="btn" type="button" name="button" onclick="addValue(4)">4</button>
+<button class="btn" type="button" name="button" onclick="addValue(5)">5</button>
+<button class="btn" type="button" name="button" onclick="addValue(6)">6</button>
+<button class="btn" type="button" name="button" onclick="addValue(7)">7</button>
+<button class="btn" type="button" name="button" onclick="addValue(8)">8</button>
+<button class="btn" type="button" name="button" onclick="addValue(9)">9</button>
+<button class="btn" type="button" name="button" onclick="addValue(0)">0</button>
+<br>
+<button class="btn" type="button" name="button" onclick="addValue('+')">+</button>
+<button class="btn" type="button" name="button" onclick="addValue('-')">-</button>
+<button class="btn" type="button" name="button" onclick="addValue('*')">x</button>
+<button class="btn" type="button" name="button" onclick="addValue('/')">/</button>
+<br>
+<button class="result" type="button" name="result" onclick="calcTotal()">=</button>
+<button class="result" type="button" name="result" onclick="clean()">C</button>
+
+<script type="text/javascript">
+    var result = document.getElementsByName("result")[0];
+    var calculator = document.getElementsByName("calculator")[0];
+    function addValue(value){
+        calculator.value += value
+    }
+    var calcTotal = function(){
+        calculator.value = eval(calculator.value);
+    }
+    var clean = function(){
+        calculator.value = '';
+    }
+</script>
+
+</body>
+</html>
